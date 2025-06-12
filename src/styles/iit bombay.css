@@ -1,0 +1,868 @@
+/* Remove default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+.iit-bombay-page {
+    display: flex;
+    flex-direction: column; /* Ensure content stacks vertically */
+  }
+  
+  .nav-structure {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    width: 100%; /* Full width */
+  }
+  
+  .section {
+    width: 100%; /* Full width */
+  }
+  
+  .section1 {
+    height: 9.0cm;
+    background-color: #28323b; /* First section color */
+  }
+  
+  .section2 {
+    height: 2.7cm;
+    background-color: #242d36; /* Second section color */
+  }
+  
+  .section3 {
+    height: 1cm; /* Takes the remaining height */
+    background-color: #2b2b2b; /* Third section color */
+  }
+  
+  /* Content styling */
+  .content {
+    padding: 20px;
+  }
+
+/* Navbar */
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust height */
+    background-color: transparent; /* Navbar background */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* App Logo on the left */
+.app-logo {
+    height: 40px; /* Adjust logo size */
+}
+
+/* Navigation Links and Search Bar */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between links */
+}
+
+/* Navbar Links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 2px 8px;
+    transition: 0.3s;
+}
+
+.-links a:hover {
+    border-radius: 5px;
+}
+
+/* Search Bar */
+.search-bar {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 150px;
+}
+
+
+/* Centered Image and Text */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Take full height of section */
+    text-align: center;
+}
+
+/* Image styling */
+.center-image {
+    width: 180px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.large-text {
+    color: white;
+    font-size: 36px;
+    padding-bottom: 20px; /* Adjust size as needed */
+}
+
+/* Second line - Smaller font */
+.small-text {
+    color: white;
+    font-family: sans-serif;
+    font-size: 15px; /* Adjust size as needed */
+}
+/* Section 2 styles */
+.section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Horizontal alignment */
+.horizontal-links {
+    display: flex;
+    gap: 30px; /* Adjust spacing */
+}
+
+/* Individual items */
+.link-item {
+    all: unset; /* Removes button default styles */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust spacing */
+    font-size: 14px;
+    color: white;
+    padding-inline: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+
+/* Hover effect */
+.link-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    transform: scale(1.05);
+}
+
+
+/* Icon styles */
+.icon .link-button {
+    font-size: 15px; /* Adjust size */
+    margin-bottom: 5px;
+}
+
+/* Section 3 styles */
+.section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Subscribe text styles */
+.subscribe-text {
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+/* Container for left and right panes */
+.content-container {
+    display: flex;
+    gap: 20px; /* Space between left and right pane */
+    padding: 20px;
+}
+
+/* Left Pane (Bigger) */
+.left-pane {
+    flex: 2.2; 
+    padding: 20px;
+}
+
+/* Right Pane (Smaller) */
+.right-pane {
+    flex: 0.9;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    max-height: 100vh; /* Ensures it doesn't go beyond viewport */
+    overflow-y: auto; /* Allows internal scrolling */
+}
+
+
+/* Headings inside panes */
+.left-pane h2, .right-pane h2 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.right-pane h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+
+/* Table Styling */
+.overview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border-radius: 1px;
+    font-size: 15px;
+}
+
+/* Table rows alternate between white and light gray */
+.overview-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.overview-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Table cells */
+.overview-table td {
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+
+.overview-table td:first-child {
+    font-weight: bold;
+}
+/* General spacing */
+p {
+    line-height: 1.5;
+}
+
+/* Styling for the text below the table */
+.info-text {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+/* Styling for blue links */
+.blue-link {
+    color: blue;
+    text-decoration: none;
+}
+
+.blue-link:hover {
+    text-decoration: underline;
+}
+
+/* Common styling for headings */
+.also-known-as h3,
+.address-section h3,
+.campus-facilities h3,
+.nearest-transport h3,
+.ranking-section h3,
+.course-selection h3,
+.mode-of-admission h3,
+.seat-matrix h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 100px;
+}
+
+.cutoff h3 ,
+.fees h3,
+.h3,
+.popular-exams,
+.college-info h3
+{
+    font-size: 18px;
+    margin-bottom: 5px;
+    margin-top: 50px;
+}
+
+
+
+/* Common text styling */
+.also-known-as p,
+.address-section p {
+    font-size: 16px;
+    color: #333;
+}
+
+
+
+/* Underline */
+.underline {
+    width: 100%;
+    height: 0.4px;
+    background-color: rgb(107, 103, 103);
+    margin-bottom: 10px;
+}
+/* Underline */
+.sm-underline {
+    max-width: 100%;
+    height: 0.2px;
+    background-color: rgb(116, 116, 116);
+    margin-bottom: 10px;
+}
+
+/* Transport list container */
+.transport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Individual row styling */
+.transport-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(200, 200, 200);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Icon styling */
+.transport-item .icon {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 30px;
+    text-align: center;
+}
+
+/* Vertical separator */
+.separator {
+    width: 1px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 15px;
+}
+
+/* Text inside transport row */
+.transport-item p {
+    font-size: 16px;
+    color: #000000;
+    margin: 0;
+}
+
+/* Smaller text (distance) */
+.transport-item span {
+    font-size: 14px;
+    color: #000000;
+}
+
+
+
+
+/* Icon Container */
+.facility-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Individual Icon */
+.ficon {
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: black;
+}
+
+
+/* Table Styling */
+.ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    text-align: left;
+    background: #fff;
+}
+
+.ranking-table th, .ranking-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.ranking-table th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ranking-table img {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Ranking Headers */
+.ranking-header {
+    background-color: #eee;
+    font-weight: bold;
+    text-align: left;
+}
+
+.course-selection {
+    text-align: left;
+    margin-top: 20px;
+  }
+ 
+  .dropdown {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #414141;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 200px;
+  }
+  
+  .course-content {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #444;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    display: inline-block;
+    min-width: 300px;
+  }
+  
+  
+  
+
+  
+  .cutoff-list {
+    width: 800px; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background: #ffffff;
+  }
+  
+  .cutoff-item {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .cutoff-year {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cutoff-divider {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
+  }
+
+  
+.cutoff-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .cutoff-button:hover {
+    background-color: #f9f9f9;
+  }
+  
+  
+  .cutoff-tabs {
+    display: flex;
+  }
+  
+  .cutoff-tab {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .cutoff-tab.active {
+    background-color: white;
+    border-bottom: 2px solid black;
+  }
+  
+  h2 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: #000000;
+    text-align: left;
+  }
+  
+  .fees-container {
+    width: 100%;
+    max-width: 800px; /* Adjust width as needed */
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+/* Table Styling */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+/* Table rows alternate between white and light gray */
+.fee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.fee-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Table cells */
+.fee-table td, .fee-table th {
+    padding: 10px;
+    border: 1px solid #f0f0f0;
+    text-align: left;
+}
+
+
+
+/* Fee waivers list */
+.fee-waivers {
+    margin-top: 5px;
+    padding-left: 0;
+    list-style-position: inside;
+    font-size: 14px;
+}
+
+.fee-waivers li {
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+/* Fee Section Container */
+.fee-section {
+    background-color: #fcfcfc; /* Light ash color */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+.placements {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Section Styling */
+.placement-section {
+    background-color: #fcfcfc; /* Light ash color */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.placement-section img {
+    width: 100%;
+    max-width: 100%;  /* Limits the image size */
+    height: auto;  /* Maintains aspect ratio */
+    display: block;
+    margin: auto;
+}
+
+/* Table Styling */
+.placement-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.placement-table th, .placement-table td {
+    padding: 12px;
+    border: 1px solid #d0d0d0;
+    font-size: 14px;
+}
+
+.placement-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.placement-table tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.placement-table td[colspan="2"] {
+    font-weight: bold;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Image Styling */
+.placement-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 10px auto;
+}
+
+
+.ash-button {
+    background-color: #edf1f2; /* Ash color */
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.ash-button:hover {
+    background-color: #A0A0A0; /* Slightly darker ash on hover */
+}
+
+.social-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e2e2;
+    padding: 15px;
+    border-radius: 5px;
+    border-color: black;
+    max-width: 100%;
+}
+
+.social-icon {
+    font-size: 56px; /* 1.5cm ≈ 56px */
+    color: #333;
+    cursor: pointer;
+}
+
+.divider {
+    width: 2px;
+    height: 40px;
+    background-color: #ccc;
+    margin: 0 20px;
+}
+
+  
+  .divider {
+    width: 1px;
+    height: 20px;
+    background-color: #ccc;
+    margin: 0 10px;
+  }
+
+  .popular-exams {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.exam-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.exam-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.exam-item:last-child {
+    border-bottom: none;
+}
+
+.exam-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+
+.exam-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.exam-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.exam-location {
+    font-size: 14px;
+    color: #666;
+    margin-top: 2px;
+}
+.related-colleges {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 15px;
+}
+
+.related-colleges h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+.college-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.college-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 12px 0;
+    transition: background 0.3s ease;
+}
+
+
+.b-college-logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+.b-college-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.b-college-name {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.b-college-location {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+ 
+  
+  .footer {
+    background-color: #242f41;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  .footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+  }
+  
+  .footer-column ul li:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    font-size: 40px;
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons i {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  

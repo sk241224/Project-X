@@ -1,0 +1,334 @@
+/* Navbar Styling */
+.clg-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4cm;
+    background: linear-gradient(to right, #36353b, #2e444c, #284e57, #304b4c, #39423d);
+    padding: 0 20px;
+    color: white;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo in Top-Left Corner */
+.clg-logo {
+    height: 35px;  /* Adjusted for better visibility */
+    width: auto;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/* Title in the Center */
+.clg-navbar-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Right-side Navbar (Links + Search) */
+.clg-navbar-right {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+/* Navigation Links */
+.clg-nav-links {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin-right: 15px;
+}
+
+.clg-nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.clg-nav-links .active a {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: orange;
+}
+
+/* Search Bar */
+.clg-search-bar {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Black Strip below Navbar */
+.black-strip {
+    position: relative;
+    top: 0cm;  /* Ensures it is right below the navbar */
+    width: 100%;
+    height: 1cm;
+    background-color: #2b2b2b;
+    display: flex;
+    justify-content: center; /* Centers the text horizontally */
+    align-items: center; /* Centers the text vertically */
+}
+
+/* Text Styling */
+.black-strip h2 {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-offset: 3px; /* Adjust spacing below text */
+    margin: 0; /* Prevents extra spacing */
+}
+/* Two-Pane Layout */
+.c-content {
+    display: flex;
+    margin-top: 5pxcm;
+        min-height: calc(100vh - 200px); /* Adjust based on navbar/footer height */
+        padding-bottom: 50px; /* Space for footer */
+      
+    flex-grow: 1; /* Allows the right pane to expand naturally */
+    height: calc(100vh - 5cm);
+}
+/* Left Pane */
+.clg-left-pane {
+    flex: 0.5;
+    padding: 15px;
+    min-width: 250px;
+}
+
+/* Search Filter Heading */
+.clg-left-pane h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Underline */
+.clg-underline {
+    border: none;
+    height: 2px;
+    background-color: black;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* Filter List */
+.filter-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Filter List */
+.filter-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Filter Item */
+.filter-item {
+    background-color: white; /* Set background to white */
+    color: black; /* Ensure text is readable */
+    padding: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ddd; /* Thin separator line */
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-item:hover {
+    background: #f8f8f8; /* Light gray on hover */
+}
+
+/* Arrow rotation when active */
+.filter-item .arrow {
+    transition: transform 0.3s ease;
+}
+
+.filter-item.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Filter Options (Dropdown) */
+.filter-options {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+    background: white;
+    padding: 0 10px;
+    box-shadow: 0px 2px 5px rgb(255, 255, 255);
+}
+
+/* When active, expand */
+.filter-item.active + .filter-options {
+    max-height: 200px; /* Adjust based on content */
+    padding: 10px;
+}
+
+/* Search Input */
+.search-input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
+    max-height: 150px; /* Set a height for scroll */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding-right: 5px; /* Prevents text from being cut off */
+}
+
+/* Optional: Custom Scrollbar (for Webkit-based browsers like Chrome) */
+.checkbox-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.checkbox-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.checkbox-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Right Pane - Bigger */
+.clg-right-pane {
+    flex: 2.5; /* Takes up 2 parts */
+    background-color: white;
+    padding: 15px;
+    position: relative;
+    min-width: 500px; /* Set minimum width */
+    
+    overflow: visible; /* Ensures no internal scroll */
+}
+/* Right Pane Title */
+.clg-right-pane-title {
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .college-count {
+    font-size: 14px;
+    color: grey;
+    font-weight: normal;
+  }
+  
+  /* Grid Layout */
+  .college-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem; /* Adjust gap if needed */
+    padding: 0;  /* Or some controlled padding */
+    margin: 0;
+  }
+  .college-grid a {
+    color: black;  /* Set the link color to black */
+    text-decoration: none;  /* Remove the underline */
+  }
+  
+  /* College Card */
+  .college-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  /* Image Container for Overlay */
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    mix-blend-mode: multiply;
+  }
+  
+  .college-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  
+  .b-college-logo {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+  /* College Name & Location */
+  .college-name {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .college-location {
+    font-size: 14px;
+    color: grey;
+  }
+  .loading-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #666;
+  }
+  
+  .spinner {
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

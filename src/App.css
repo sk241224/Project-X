@@ -1,0 +1,1042 @@
+/*
+  App.css - Main stylesheet for the College Pravesh React App
+  ----------------------------------------------------------
+  This file contains all the layout, component, and responsive styles for the website.
+  Each section is commented to indicate which part of the UI it styles.
+*/
+
+/* =====================
+   Container Layout
+   (Used for .container, .full-width, .col-sm-*)
+   ===================== */
+.container {
+  /* Main content wrapper for centering and padding */
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.full-width {
+  /* Ensures content stretches full width but hides horizontal overflow */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.col-sm-12 {
+  /* Bootstrap-like grid: full width */
+  width: 100%;
+}
+
+.col-sm-8 {
+  /* Bootstrap-like grid: 8/12 width */
+  width: 66.6667%;
+}
+
+.col-sm-offset-2 {
+  /* Bootstrap-like grid: offset by 2/12 */
+  margin-left: 16.6667%;
+}
+
+.center-heading {
+  /* Used for section headings to center text */
+  text-align: center;
+}
+
+/* =====================
+   Button and Link Styling
+   (Used for .wp-block-button__link, .wp-block-file__button)
+   ===================== */
+.wp-block-button__link {
+  /* Gold pill-shaped button */
+  color: #111;
+  background-color: #FFD700;
+  border-radius: 9999px;
+  text-decoration: none;
+  padding: calc(0.667em + 2px) calc(1.333em + 2px);
+  font-size: 1.125em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.wp-block-button__link:hover {
+  background: #fffbe6;
+  color: #bfa100;
+}
+
+.wp-block-file__button {
+  /* Deep blue file download button */
+  background: #1e3a8a;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* =====================
+   Header Styles
+   (Used for #theme-header, .theme-header, .logo, nav)
+   ===================== */
+#theme-header {
+  /* Main header bar */
+  background-color: #111;
+  padding: 10px 0;
+  border-bottom: 3px solid #FFD700;
+}
+
+.theme-header .logo {
+  /* Logo container, centers logo and text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-header .logo h1 {
+  /* Logo text */
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.theme-header #main-nav {
+  /* Navigation bar container */
+  text-align: center;
+}
+
+.theme-header #main-nav .menu {
+  /* Navigation menu list */
+  list-style-type: none;
+  padding: 0;
+}
+
+.theme-header #main-nav .menu li {
+  /* Navigation menu item */
+  display: inline;
+  margin-right: 20px;
+}
+
+.theme-header #main-nav .menu li a {
+  /* Navigation menu link */
+  color: #FFD700;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.theme-header #main-nav .menu li a:hover {
+  color: #fffbe6;
+}
+
+/* =====================
+   Footer Layout
+   (Used for .footer, .footer-container, .footer-column, .footer-logo, etc.)
+   ===================== */
+.footer {
+  /* Main footer background and border */
+  background: linear-gradient(120deg, #181818 60%, #232323 100%) !important;
+  color: #FFD700;
+  border-top: 3px solid #FFD700;
+  box-shadow: 0 -4px 32px #FFD70022;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  margin-top: 64px;
+}
+
+.footer-container {
+  /* Flex container for footer columns */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.footer-column {
+  /* Each column in the footer */
+  flex: 1;
+  min-width: 220px;
+  margin: 0 15px;
+  padding-bottom: 32px;
+}
+
+.footer-column h3 {
+  /* Footer section headings (COLLEGE, EXAM, etc.) */
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+  letter-spacing: 1.5px;
+  color: #FFD700;
+  position: relative;
+  text-transform: uppercase;
+  text-shadow: 0 2px 12px #FFD70044;
+  padding-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer-column h3::after {
+  /* Gold underline below each footer heading */
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #FFD700 0%, #fffbe6 100%);
+  border-radius: 2px;
+  margin: 8px auto 0 auto;
+  box-shadow: 0 2px 8px #FFD70044;
+}
+@media (max-width: 900px) {
+  .footer-column h3::after {
+    margin: 8px auto 0 auto;
+    width: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-column h3::after {
+    margin: 6px auto 0 auto;
+    width: 28px;
+    height: 2px;
+  }
+}
+
+.footer-column ul {
+  /* List of links in each footer column */
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  /* Footer links */
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+  color: #FFD700;
+  text-shadow: 0 2px 8px #FFD70044;
+}
+
+.footer-bottom {
+  /* Bottom bar of the footer (social icons, copyright) */
+  text-align: center;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1.5px solid #FFD70044;
+  background: transparent;
+}
+
+.social-icons {
+  /* Social media icon row in footer */
+  margin-bottom: 18px;
+}
+.social-icons a {
+  margin: 0 18px;
+  color: #FFD700;
+  transition: color 0.2s, transform 0.2s;
+}
+.social-icons a:hover {
+  color: #fffbe6;
+  transform: scale(1.15);
+}
+
+.footer-logo {
+  /* Large 'cp' logo in footer */
+  color: #FFD700;
+  font-size: 2.8rem;
+  font-weight: 1000;
+  margin: 18px 0 8px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px #FFD70044;
+}
+
+.footer-bottom p {
+  /* Copyright text */
+  font-size: 1rem;
+  color: #FFD700;
+  margin: 0;
+  opacity: 0.85;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .footer-column {
+    text-align: center;
+    margin-bottom: 36px;
+    padding-bottom: 0;
+  }
+}
+
+/* =====================
+   Mobile Responsiveness
+   ===================== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+/* =====================
+   Updates Section
+   (Used for .updates-container, .updates-title, .updates-grid, .update-card)
+   ===================== */
+.updates-container {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #181818 !important; /* Fix white patch between updates and showcase section */
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #FFD70022;
+  border: 1.5px solid #FFD70044;
+  color: #FFD700;
+}
+
+.updates-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  color: #1e3a8a; /* Primary Deep Blue */
+}
+
+.updates-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: red !important;
+  margin: 5px auto 0;
+}
+
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.update-card {
+  background: #181818;
+  border: 1.5px solid #FFD700;
+  box-shadow: 0 8px 32px #FFD70022, 0 2px 8px #000a;
+  color: #FFD700;
+  border-radius: 18px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  border-left: 4px solid #3b82f6; /* Sky Blue accent stripe */
+  color: #111827; /* Dark text */
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================
+   College Section
+   (Used for .top-colleges, .college-list, .college-card, .college-info)
+   ===================== */
+.top-colleges {
+  text-align: center;
+  padding: 40px;
+  background-color: #181818 !important;
+  margin-bottom: 48px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #FFD70022;
+  border: 1.5px solid #FFD70044;
+}
+
+.top-colleges h2,
+h2.take-informed-decisions, /* for a class if used */
+h2#take-informed-decisions, /* for an id if used */
+h3.take-informed-decisions, /* for h3 variant */
+h3#take-informed-decisions {
+  background: linear-gradient(90deg, #FFD700 10%, #fffbe6 60%, #FFD700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 1000;
+  font-size: 3.2rem;
+  text-shadow: 0 4px 32px #FFD70099, 0 2px 16px #FFD70044;
+  letter-spacing: 3px;
+  padding-bottom: 12px;
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.top-colleges h2::after,
+h2.take-informed-decisions::after,
+h2#take-informed-decisions::after,
+h3.take-informed-decisions::after,
+h3#take-informed-decisions::after {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 5px;
+  margin: 12px auto 0 auto;
+  background: linear-gradient(90deg, #FFD700 0%, #fffbe6 100%);
+  border-radius: 3px;
+  box-shadow: 0 2px 16px #FFD70088;
+}
+
+.college-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.college-card {
+  background: #181818;
+  border: 2px solid #FFD700;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px #FFD70033, 0 2px 8px #000a;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  color: #FFD700;
+  position: relative;
+}
+
+.college-card:hover {
+  transform: scale(1.045) translateY(-6px);
+  box-shadow: 0 16px 48px #FFD70055, 0 4px 16px #fffbe6;
+  border-color: #fffbe6;
+  background: #232323;
+}
+
+.college-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 22px 22px 0 0;
+  transition: filter 0.4s, box-shadow 0.4s;
+  box-shadow: 0 4px 24px #FFD70033;
+  filter: brightness(0.95) saturate(1.15) drop-shadow(0 0 12px #FFD70044);
+  position: relative;
+}
+
+.college-card:hover .college-image {
+  filter: brightness(1.05) saturate(1.25) drop-shadow(0 0 24px #FFD70088);
+  box-shadow: 0 8px 32px #FFD70055;
+}
+
+.college-info {
+  background: rgba(24, 24, 24, 0.85);
+  padding: 24px 20px 20px 20px;
+  text-align: left;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 2px 12px #FFD70022;
+}
+
+.college-info h3 {
+  font-size: 26px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #FFD700;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 12px #FFD70044;
+}
+
+.college-info ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.college-info ul li {
+  font-size: 17px;
+  color: #FFD700;
+  margin-bottom: 8px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.college-info ul li::before {
+  content: "\2022";
+  color: #fffbe6;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 900px) {
+  .college-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .college-card {
+    width: 100%;
+  }
+}
+
+/* =====================
+   Slick Carousel Custom Styling
+   (If using react-slick for carousels)
+   ===================== */
+.slick-prev,
+.slick-next {
+  font-size: 30px;
+  color: #1e3a8a; /* Primary Deep Blue */
+  z-index: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  color: #3b82f6; /* Sky Blue on hover */
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+/* =====================
+   Premium Theme Styles
+   (Global styles for the premium theme layout and effects)
+   ===================== */
+body, .wrapper-outer, .background-cover, .wide-layout, .inner-wrapper, .content, .post-inner {
+  background: linear-gradient(120deg, #181818 0%, #232323 100%) fixed !important;
+  color: #FFD700 !important;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  animation: premium-bg-move 16s ease-in-out infinite alternate;
+}
+
+@keyframes premium-bg-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+#theme-header {
+  background-color: #111; /* Black */
+  padding: 10px 0;
+  border-bottom: 3px solid #FFD700;
+}
+
+.theme-header .logo h1 {
+  color: #FFD700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.theme-header #main-nav .menu li a {
+  color: #FFD700;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: color 0.2s;
+}
+
+.theme-header #main-nav .menu li a:hover {
+  color: #fffbe6;
+}
+
+.footer {
+  background: linear-gradient(120deg, #181818 60%, #232323 100%) !important;
+  color: #FFD700;
+  border-top: 3px solid #FFD700;
+  box-shadow: 0 -4px 32px #FFD70022;
+  padding-top: 48px;
+  padding-bottom: 32px;
+  margin-top: 64px;
+}
+
+.footer-logo {
+  color: #FFD700;
+}
+
+h2, .center-heading h2, .updates-title, .top-colleges h2 {
+  background: linear-gradient(90deg, #FFD700 0%, #fffbe6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 900;
+  font-size: 2.4rem;
+  text-shadow: 0 2px 16px #FFD70044;
+  letter-spacing: 2px;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  margin-top: 20px;
+}
+
+/* =====================
+   Card and Section Styling
+   (Used for .update-card, .college-card, .updates-container, .top-colleges)
+   ===================== */
+.update-card, .college-card {
+  background: #181818;
+  border: 1.5px solid #FFD700;
+  box-shadow: 0 8px 32px #FFD70022, 0 2px 8px #000a;
+  color: #FFD700;
+  border-radius: 18px;
+}
+
+.update-card:hover, .college-card:hover {
+  background: #232323;
+}
+
+.updates-container, .top-colleges {
+  background: #181818;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px #FFD70022;
+  border: 1.5px solid #FFD70044;
+}
+
+.cps-info {
+  color: #FFD700;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  text-shadow: 0 2px 12px #FFD70044;
+  background: rgba(24, 24, 24, 0.7);
+  padding: 8px 0 4px 0;
+  border-radius: 0 0 14px 14px;
+  width: 100%;
+  box-shadow: 0 2px 8px #FFD70022;
+}
+
+/* =====================
+   Gold accent for dividers and highlights
+   (Used for .premium-divider)
+   ===================== */
+.premium-divider {
+  height: 4px;
+  width: 100px;
+  margin: 24px auto 32px auto;
+  background: linear-gradient(90deg, #FFD700 0%, #fffbe6 100%);
+  border-radius: 2px;
+  box-shadow: 0 2px 12px #FFD70044;
+  animation: gold-divider-move 4s linear infinite alternate;
+}
+
+@keyframes gold-divider-move {
+  0% { box-shadow: 0 2px 12px #FFD70044; }
+  100% { box-shadow: 0 4px 24px #FFD70088; }
+}
+
+/* =====================
+   Hide all scrollbars for a uniform, premium look
+   (Applied to body, html, and all major containers)
+   ===================== */
+body, html, .container, .full-width, .content, .post-inner, .cp-showcase, .student-engage-row {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar, .container::-webkit-scrollbar, .full-width::-webkit-scrollbar, .content::-webkit-scrollbar, .post-inner::-webkit-scrollbar, .cp-showcase::-webkit-scrollbar, .student-engage-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* =====================
+   Ensure uniform section spacing and alignment
+   (Used for .section-full, .updates-container, .top-colleges, .cp-showcase, .student-engage-row)
+   ===================== */
+.section-full, .updates-container, .top-colleges, .cp-showcase, .student-engage-row {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.cp-showcase {
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  margin-bottom: 64px;
+  width: 100%;
+}
+
+.cp-showcase-link {
+  width: 220px;
+  min-width: 220px;
+  max-width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .cp-showcase-link {
+    width: 160px;
+    min-width: 160px;
+  }
+}
+@media (max-width: 600px) {
+  .cp-showcase-link {
+    width: 120px;
+    min-width: 120px;
+  }
+}
+
+/* =====================
+   Fix overlap between Showcase and Updates section
+   (Used for .section-spacer)
+   ===================== */
+.section-spacer {
+  height: 80px;
+  min-height: 80px;
+  width: 100vw;
+  max-width: 100vw;
+  display: block;
+  background: #181818 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.cp-showcase {
+  margin-bottom: 0;
+}
+
+.updates-container {
+  margin-top: 48px !important;
+}
+
+/* =====================
+   Section spacing and responsive adjustments
+   (Used for .section-full, .section-spacer, .cp-showcase, .updates-container, .top-colleges)
+   ===================== */
+.section-full {
+  margin-top: 56px;
+  margin-bottom: 56px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.section-spacer {
+  height: 80px;
+  min-height: 80px;
+  width: 100vw;
+  max-width: 100vw;
+  display: block;
+  background: #181818 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+.cp-showcase, .updates-container, .top-colleges {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .cp-showcase, .updates-container, .top-colleges {
+    max-width: 98vw;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 900px) {
+  .section-full {
+    margin-top: 36px;
+    margin-bottom: 36px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  .section-spacer {
+    height: 48px;
+    min-height: 48px;
+  }
+}
+@media (max-width: 600px) {
+  .section-full {
+    margin-top: 18px;
+    margin-bottom: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .section-spacer {
+    height: 24px;
+    min-height: 24px;
+  }
+}
+
+/* =====================
+   Uniform spacing between main sections in post-inner
+   (Ensures consistent spacing between sections in the post content)
+   ===================== */
+.post-inner > * + * {
+  margin-top: 64px;
+}
+
+@media (max-width: 900px) {
+  .post-inner > * + * {
+    margin-top: 36px;
+  }
+}
+@media (max-width: 600px) {
+  .post-inner > * + * {
+    margin-top: 18px;
+  }
+}
+
+/* =====================
+   Responsive Layout Enhancements
+   (General responsive tweaks for container, footer, and sections)
+   ===================== */
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .footer-container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 0 8px;
+  }
+  .footer-column {
+    text-align: center;
+    margin-bottom: 36px;
+    padding-bottom: 0;
+    min-width: 0;
+    width: 100%;
+  }
+  .top-colleges {
+    padding: 24px 8px;
+  }
+  .updates-container {
+    padding: 24px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2px;
+  }
+  .footer-column {
+    text-align: center;
+    margin-bottom: 30px;
+    width: 100%;
+    min-width: 0;
+  }
+  .top-colleges {
+    padding: 16px 2px;
+  }
+  .updates-container {
+    padding: 16px 2px;
+  }
+  .center-heading h2, .updates-title, .footer-column h3 {
+    font-size: 1.2rem;
+  }
+  .college-info ul {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container, .full-width {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .footer-container {
+    padding: 0;
+  }
+  .footer-column {
+    margin: 0 0 18px 0;
+    padding-bottom: 0;
+  }
+  .footer-logo {
+    font-size: 2rem;
+  }
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
+  .updates-title {
+    font-size: 1rem;
+  }
+  .updates-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .college-card {
+    min-width: 220px;
+    max-width: 95vw;
+    margin: 0 auto;
+  }
+  .cp-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cp-showcase-link {
+    width: 100%;
+    min-width: 0;
+  }
+  .college-info h3 {
+    font-size: 1rem;
+  }
+  .college-info ul li {
+    font-size: 0.95rem;
+  }
+  .top-colleges {
+    padding: 8px 0;
+  }
+}
+
+/* =====================
+   Responsive Navigation Bar
+   (Used for .theme-header .hamburger, nav, and menu on mobile/tablet)
+   - Hamburger menu appears on left for small screens
+   - Nav menu overlays and stacks vertically
+   ===================== */
+.theme-header .hamburger {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 1001;
+  background: none;
+  border: none;
+}
+.theme-header .hamburger span {
+  /* Hamburger bar lines */
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #FFD700;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+@media (max-width: 900px) {
+  .theme-header .hamburger {
+    display: flex; /* Show hamburger on tablet/phone */
+    position: absolute;
+    left: 16px;
+    right: auto;
+    top: 18px;
+  }
+  .theme-header .logo {
+    justify-content: center;
+    margin-left: 40px; /* space for hamburger */
+  }
+  .theme-header #main-nav {
+    /* Overlay nav for mobile/tablet */
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background: #181818;
+    z-index: 1000;
+    box-shadow: 0 4px 24px #FFD70022;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .theme-header #main-nav.open {
+    display: flex; /* Show nav when open */
+  }
+  .theme-header #main-nav .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+  }
+  .theme-header #main-nav .menu li {
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .theme-header #main-nav .menu li a {
+    display: block;
+    width: 100vw;
+    padding: 16px 0;
+    font-size: 1.1em;
+    border-bottom: 1px solid #FFD70022;
+    background: none;
+  }
+}
+@media (max-width: 600px) {
+  .theme-header .hamburger {
+    left: 8px;
+    right: auto;
+    top: 10px;
+  }
+  .theme-header .logo {
+    margin-left: 36px;
+  }
+  .theme-header #main-nav {
+    top: 48px;
+  }
+  .theme-header #main-nav .menu li a {
+    font-size: 1em;
+    padding: 12px 0;
+  }
+}
+
+/* =====================
+   Carousel/Slider responsiveness
+   (if using react-slick)
+   ===================== */
+.slick-slider {
+  width: 100%;
+}
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li button:before {
+  font-size: 12px;
+}
